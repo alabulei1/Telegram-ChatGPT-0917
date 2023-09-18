@@ -19,7 +19,7 @@ async fn handler(update: Update) {
     logger::init();
     let telegram_token = std::env::var("telegram_token").unwrap();
     let placeholder_text = std::env::var("placeholder").unwrap_or("Typing ...".to_string());
-    let system_prompt = std::env::var("system_prompt").unwrap_or("You are a helpful assistant answering questions on Telegram.".to_string());
+    let system_prompt = std::env::var("system_prompt").unwrap_or("You are a helpful assistant Telegram.".to_string());
     let help_mesg = std::env::var("help_mesg").unwrap_or("I am your assistant on Telegram. Ask me any question! To start a new conversation, type the /restart command.".to_string());
 
     let tele = Telegram::new(telegram_token.to_string());
